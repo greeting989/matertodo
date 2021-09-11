@@ -8,7 +8,9 @@ import Submit from "./../Button/Button";
 import "./textbox.css";
 
 function TextBox() {
+  
   return (
+    
     <div className="formdiv">
       <Container fluid>
         <Row>
@@ -21,7 +23,7 @@ function TextBox() {
                 className="text-center mt-5"
               />
             </Form>
-            <Submit className="text-center mt-5" btntext={"Add"}/>
+            <Submit className="text-center mt-5" title={"Add"}/>
           </Col>
           <Col></Col>
         </Row>
