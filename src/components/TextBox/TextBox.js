@@ -21,7 +21,7 @@ function TextBox() {
                 className="text-center mt-5"
               />
             </Form>
-            <Submit className="text-center mt-5" />
+            <Submit className="text-center mt-5" btntext={"Add"}/>
           </Col>
           <Col></Col>
         </Row>
