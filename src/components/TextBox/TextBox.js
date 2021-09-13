@@ -11,8 +11,14 @@ import ListBox from "../ListBox/ListBox";
 function TextBox() {
   const [inputData, setInputData] = useState("");
   const [items, setItems] = useState([]);
+  const stylecard ={
+    width: "50%",
+    margin: "auto",
+    marginTop: "1rem",
+    backgroundColor: "grey",
+    color: "white"
+  }
   const addHandler = () => {
-    // console.log("clicked")
     if (!inputData) {
       alert("Add item");
     } else {
@@ -24,7 +30,13 @@ function TextBox() {
       setInputData("");
     }
   };
-  console.log(inputData);
+
+  const DeleteHandler = (id) => {
+    let updatedList = items.filter((curElement) => {
+      return curElement.id !== id;
+    });
+    setItems(updatedList);
+  };
   return (
     <div className="formdiv">
       <Container fluid>
@@ -50,11 +62,17 @@ function TextBox() {
         </Row>
         <Row>
           <Col>
-            {items.map((item, index) => {
+            {items&&items.map((item, index) => {
               return (
                 <>
-                  <Card style={{ width: "50%", margin: "auto" , marginTop: "1rem" ,backgroundColor: "grey" , color:"white"}}>
+                  <Card
+                   style={stylecard}
+                  >
                     <ListBox item={item} index={index} />
+                    <i
+                      class="bi bi-trash2-fill"
+                      onClick={() => DeleteHandler(item.id)}
+                    ></i>
                   </Card>
                 </>
               );

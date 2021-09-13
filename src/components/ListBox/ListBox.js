@@ -1,9 +1,10 @@
 import React from 'react'
 
 function ListBox(props) {
+    const {item:{name=''}} = props;
     return (
         <div>
-            <p>{props.item.name}</p>
+            <p>{name}</p>
         </div>
     )
 }
