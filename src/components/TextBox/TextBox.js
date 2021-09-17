@@ -8,48 +8,32 @@ import { Card } from "react-bootstrap";
 import "./textbox.css";
 import ListBox from "../ListBox/ListBox";
 
-function TextBox() {
-  const [inputData, setInputData] = useState("");
-  const [items, setItems] = useState([]);
-  const stylecard ={
-    width: "50%",
-    margin: "auto",
-    marginTop: "1rem",
-    backgroundColor: "grey",
-    color: "white"
-  }
-  const addHandler = () => {
-    if (!inputData) {
-      alert("Add item");
-    } else {
-      const mynewData = {
-        id: new Date().getTime().toString(),
-        name: inputData,
-      };
-      setItems([...items, mynewData]);
-      setInputData("");
-    }
+function TextBox({
+  inputData,
+  setInputData,
+  items,
+  addHandler,
+  DeleteHandler,
+  setEnterHandler,
+}) {
+  const para = {
+    fontSize: "25px",
   };
 
-  const DeleteHandler = (id) => {
-    let updatedList = items.filter((curElement) => {
-      return curElement.id !== id;
-    });
-    setItems(updatedList);
-  };
   return (
-    <div className="formdiv">
+    <div>
       <Container fluid>
         <Row>
           <Col></Col>
-          <Col xs={5}>
+          <Col xs={5} className="formdiv">
             <Form>
               <Form.Control
                 type="text"
-                placeholder="Add item"
-                className="text-center mt-5"
+                placeholder="Start Typing..."
+                className="text-center mt-5 frmtext"
                 value={inputData}
                 onChange={(e) => setInputData(e.target.value)}
+                onKeyPress={setEnterHandler}
               />
             </Form>
             <Submit
@@ -60,23 +44,29 @@ function TextBox() {
           </Col>
           <Col></Col>
         </Row>
+        <br />
+        <p style={para}>Tasks </p>
+        <br />
         <Row>
           <Col>
-            {items&&items.map((item, index) => {
-              return (
-                <>
-                  <Card
-                   style={stylecard}
-                  >
-                    <ListBox item={item} index={index} />
-                    <i
-                      class="bi bi-trash2-fill"
-                      onClick={() => DeleteHandler(item.id)}
-                    ></i>
-                  </Card>
-                </>
-              );
-            })}
+            {items &&
+              items.map((item, index) => {
+                return (
+                  <Row>
+                    <Col></Col>
+                    <Col xs={5}>
+                      <div className="listbox">
+                        <ListBox item={item} />
+                        <i
+                          className="bi bi-trash2-fill"
+                          onClick={() => DeleteHandler(item.id)}
+                        ></i>
+                      </div>
+                    </Col>
+                    <Col></Col>
+                  </Row>
+                );
+              })}
           </Col>
         </Row>
       </Container>

@@ -1,12 +1,18 @@
-.formdiv {
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-  align-items: center;
+.formdiv{
+  background-color: #F0D9FF;
+  width:max-content;
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
-.frmtext {
-  width: 80%;
+.listbox{
+  background-color: #F0D9FF;
+    display: flex;           /* establish flex container */
+    flex-direction: row;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; 
+    color: #7F7C82;
+    font-size: 1.5rem;    /* center items horizontally, in this case */
+    margin-top: 1rem;
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+   
 }
-
-
