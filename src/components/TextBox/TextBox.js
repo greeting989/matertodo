@@ -39,7 +39,7 @@ function TextBox({
             <Submit
               className="text-center mt-5"
               title={"Add"}
-              addHandler={addHandler}
+              addHandler={(e)=>addHandler(e)}
             />
           </Col>
           <Col></Col>

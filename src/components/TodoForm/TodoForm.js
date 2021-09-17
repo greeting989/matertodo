@@ -28,11 +28,12 @@ function TodoForm() {
     setItems(updatedList);
   };
   const setEnterHandler = (e) => {
-    if (e.key === "Enter") {
-      const myNewData = {
+   
+    if (e.key == "Enter") {
+      e.preventDefault();
+      const myNewData = {           
         id: new Date().getTime().toString(),
-        name: inputData,
-      
+        name: inputData, 
       };
       setItems([...items, myNewData]);
       setInputData("");
