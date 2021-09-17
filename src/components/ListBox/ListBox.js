@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './listbox.css';
 
 function ListBox(props) {
+    
     const {item:{name=''}} = props;
     return (
         <div>
-            <p>{name}</p>
+            <p className="pa">{name}</p>
         </div>
     )
 }
