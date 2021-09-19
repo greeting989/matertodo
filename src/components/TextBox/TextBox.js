@@ -26,7 +26,7 @@ function TextBox({
         <Row>
           <Col></Col>
           <Col xs={5} className="formdiv">
-            <Form>
+            
               <Form.Control
                 type="text"
                 placeholder="Start Typing..."
@@ -35,7 +35,7 @@ function TextBox({
                 onChange={(e) => setInputData(e.target.value)}
                 onKeyPress={setEnterHandler}
               />
-            </Form>
+           
             <Submit
               className="text-center mt-5"
               title={"Add"}
