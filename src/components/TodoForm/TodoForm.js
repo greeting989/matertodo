@@ -8,10 +8,11 @@ import Header from "./../Header/Header";
 function TodoForm() {
   const [inputData, setInputData] = useState("");
   const [items, setItems] = useState([]);
+  //console.log(items);
   const addHandler = () => {
     if (!inputData) {
       alert("Add item");
-    } else if(items.findIndex((item)=>item===inputData)===-1){
+    } else if (items.findIndex((item) => item.name === inputData) === -1) {
       const mynewData = {
         id: new Date().getTime().toString(),
         name: inputData,
@@ -28,15 +29,17 @@ function TodoForm() {
     setItems(updatedList);
   };
   const setEnterHandler = (e) => {
-   
-    if (e.key == "Enter") {
-      e.preventDefault();
-      const myNewData = {           
-        id: new Date().getTime().toString(),
-        name: inputData, 
-      };
-      setItems([...items, myNewData]);
-      setInputData("");
+    if (!inputData) {
+      return;
+    } else if (e.key == "Enter") {
+      if (items.findIndex((item) => item.name === inputData) === -1) {
+        const myNewData = {
+          id: new Date().getTime().toString(),
+          name: inputData,
+        };
+        setItems([...items, myNewData]);
+        setInputData("");
+      }
     }
   };
   return (

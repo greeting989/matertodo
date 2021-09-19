@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import './header.css';
 function Header() {
   const style={
-    color:"#7F7C82",
+    color:"black",
     fontSize:"3em",
     
   }
