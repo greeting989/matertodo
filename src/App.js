@@ -8,8 +8,8 @@ import GhostContentAPI from "@tryghost/content-api";
 function App() {
   useEffect(()=>{
     const api = new GhostContentAPI({
-      url: 'https://demo.ghost.io',
-      key: '22444f78447824223cefc48062',
+      url: 'https://ghost-blog.ipxp.in',
+      key: '8196190b08906dda0ebf6e6f5d',
       version: "v3"
     });
     
