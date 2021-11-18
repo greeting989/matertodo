@@ -1,3 +1,7 @@
-.pa{
-    
+.todo-text {
+  cursor: pointer;
+}
+
+.todo-completed {
+  text-decoration: line-through;
 }
