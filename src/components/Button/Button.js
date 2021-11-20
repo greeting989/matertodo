@@ -5,8 +5,8 @@ function Submit(props) {
   const { title = "Add", addHandler } = props;
   return (
     <div>
-      <button size="sm" className="button-81" onClick={props.addHandler}>
-        🖋{title}
+      <button size="sm" className="but_grp" onClick={props.addHandler}>
+        ➕{title}
       </button>
     </div>
   );

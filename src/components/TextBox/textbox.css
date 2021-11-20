@@ -1,26 +1,18 @@
-.formdiv {
-  background-color: #f0d9ff;
-  width: max-content;
-  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-}
-
-.listbox {
-  background-color: #f0d9ff;
-  display: flex; /* establish flex container */
-  flex-direction: row; /* make main axis vertical */
-  justify-content: center; /* center items vertically, in this case */
-  align-items: center;
-  color: #7f7c82;
-  font-size: 1.5rem; /* center items horizontally, in this case */
-  margin-top: 1rem;
-  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-}
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap");
 .todo-text {
   cursor: pointer;
 }
 
 .todo-completed {
   text-decoration: line-through;
+}
+.form_div {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 1.5rem 2rem;
+  font-family: "Assistant", sans-serif;
+}
+input[type="text"] {
+  width: 250px;
 }

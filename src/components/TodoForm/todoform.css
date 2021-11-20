@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.todo_div {
+  width: 550px;
+  margin: auto;
+  margin-top: 1.8rem;
+  background: rgba(255, 253, 241, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.working {
+  width: 400px;
+  position: fixed;
+  top: 45%;
+  left: 85%;
+  z-index: 1;
+}

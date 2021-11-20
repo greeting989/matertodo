@@ -1,5 +1,17 @@
 .todo-text {
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  background-color: #71dfe7;
+  margin: auto;
+  margin-top: 0.45rem;
+  font-size: 1rem;
+  color: #6b4f4f;
+  text-align: center;
+  font-weight: 800;
 }
 
 .todo-completed {
